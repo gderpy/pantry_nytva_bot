@@ -1,11 +1,13 @@
 from aiogram import Router
-from aiogram.filters.command import CommandStart
-from aiogram.types import Message
+
+from handlers import start_handlers
+
 
 router = Router()
+router.include_router(start_handlers.router)
 
 
-@router.message(CommandStart())
-async def handle_start_cmd(message: Message):
-    await message.answer(text="Проверка")
+
+
+
 
