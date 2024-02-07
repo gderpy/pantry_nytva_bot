@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pantry-nytva-bot"
+version = "0.1.0"
+description = "mini-shop"
+authors = ["Yury Petrov <gderpov@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.3.0"
+
+[tool.poetry.group.dev.dependencies]
+SQLAlchemy = "^2.0.25"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
