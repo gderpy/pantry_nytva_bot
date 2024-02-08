@@ -9,12 +9,14 @@ from aiogram import Bot, Dispatcher
 from config.bot_config import API_TOKEN
 from middlewares.offer import OfferingProductMiddleware
 from middlewares.message_engine import MessageEngineMiddleware
+from sql import async_session
 
 
 class MyBot:
     def __init__(self):
         self.bot = Bot(token=API_TOKEN, parse_mode="HTML")
         self.dp = Dispatcher()
+        self.session = async_session
 
     async def on_startup(self):
 
