@@ -1,3 +1,5 @@
+import logging
+
 from aiogram import Router, F
 from aiogram.filters.command import CommandStart
 from aiogram.types import Message, CallbackQuery
@@ -12,6 +14,8 @@ router = Router()
 @router.message(CommandStart())
 @router.callback_query(F.data == "back_to_main_menu")
 async def handle_start_cmd(msg: Message | CallbackQuery):
+
+    logging.info(f"Пользователь - {msg.from_user.id} нажал на /start")
 
     if isinstance(msg, Message):
         if msg.from_user.id in ADMINS:
@@ -32,4 +36,6 @@ async def handle_start_cmd(msg: Message | CallbackQuery):
 
         await msg.message.edit_text(text=text, reply_markup=kb)
         await msg.answer()
+
+
 
