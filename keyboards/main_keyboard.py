@@ -1,6 +1,6 @@
 from aiogram.utils.keyboard import InlineKeyboardButton, InlineKeyboardMarkup
 
-from keyboards.menu import MainMenu
+from keyboards.any_kbs.menu import MainMenu
 
 
 class Keyboard:
