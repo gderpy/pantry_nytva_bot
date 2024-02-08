@@ -8,6 +8,7 @@ from aiogram import Bot, Dispatcher
 
 from config.bot_config import API_TOKEN
 from config.log_config import FORMAT, FMT
+from middlewares.offer import OfferingProductMiddleware
 
 
 class MyBot:
@@ -17,6 +18,7 @@ class MyBot:
 
     async def on_startup(self):
 
+        self.dp.update.middleware(OfferingProductMiddleware)
         self.dp.include_router(main_routers.router)
 
         await self.bot.delete_webhook(drop_pending_updates=True)
