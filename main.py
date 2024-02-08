@@ -7,18 +7,20 @@ import main_routers
 from aiogram import Bot, Dispatcher
 
 from config.bot_config import API_TOKEN
-from config.log_config import FORMAT, FMT
 from middlewares.offer import OfferingProductMiddleware
+from middlewares.message_engine import MessageEngineMiddleware
 
 
 class MyBot:
     def __init__(self):
-        self.bot = Bot(token=API_TOKEN)
+        self.bot = Bot(token=API_TOKEN, parse_mode="HTML")
         self.dp = Dispatcher()
 
     async def on_startup(self):
 
-        self.dp.update.middleware(OfferingProductMiddleware)
+        self.dp.update.middleware(OfferingProductMiddleware())
+        self.dp.update.middleware(MessageEngineMiddleware())
+
         self.dp.include_router(main_routers.router)
 
         await self.bot.delete_webhook(drop_pending_updates=True)
@@ -28,7 +30,7 @@ class MyBot:
 if __name__ == "__main__":
     my_bot = MyBot()
 
-    logging.basicConfig(format=FORMAT, datefmt=FMT, stream=sys.stdout, level="INFO")
+    logging.getLogger().setLevel(logging.INFO)
 
     try:
         logging.info("Running a bot")
