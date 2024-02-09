@@ -20,4 +20,5 @@ class DBConfig(BaseModel):
 
 db_config = DBConfig()
 postgres_url = db_config.postgres_url
+print(postgres_url)
 
