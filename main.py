@@ -5,18 +5,21 @@ import sys
 import main_routers
 
 from aiogram import Bot, Dispatcher
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
 from config.bot_config import API_TOKEN
+from config.db_config import postgres_url
 from middlewares.offer import OfferingProductMiddleware
 from middlewares.message_engine import MessageEngineMiddleware
-from sql import async_session
 
 
 class MyBot:
     def __init__(self):
         self.bot = Bot(token=API_TOKEN, parse_mode="HTML")
         self.dp = Dispatcher()
-        self.session = async_session
+
+        self.engine = create_async_engine(url=postgres_url, echo=True)
+        self.async_session = async_sessionmaker(bind=self.engine, expire_on_commit=False)
 
     async def on_startup(self):
 

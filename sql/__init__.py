@@ -1,3 +1,3 @@
-__all__ = ["engine", "async_session"]
+__all__ = ["Base"]
 
-from .sql_engine import engine, async_session
+from .models.product_request import Base

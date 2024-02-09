@@ -10,8 +10,10 @@ python = "^3.12"
 aiogram = "^3.3.0"
 
 [tool.poetry.group.dev.dependencies]
-SQLAlchemy = "^2.0.25"
+SQLAlchemy = {extras = ["asyncio"], version = "^2.0.25"}
 python-dotenv = "^1.0.1"
+asyncpg = "^0.29.0"
+alembic = "^1.13.1"
 
 [build-system]
 requires = ["poetry-core"]
