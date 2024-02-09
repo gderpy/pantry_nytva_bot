@@ -1,20 +1,41 @@
-<mxfile host="app.diagrams.net" modified="2024-02-07T17:46:10.324Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="jJI_IfBHbz_NN5tIZQG3" version="23.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-09T13:48:41.320Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="f7gPFyUDXgZiMdcu31zz" version="23.1.2" type="github">
   <diagram name="Страница — 1" id="KIN2gG-zfyWFB8LVaXYR">
-    <mxGraphModel dx="636" dy="334" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="840" dy="441" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Sx3DHRGQblbtLjs13mfJ-1" value="Keyboard" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="330" y="240" width="220" height="174" as="geometry" />
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-1" value="AdminPanel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="240" width="230" height="144" as="geometry" />
         </mxCell>
-        <mxCell id="Sx3DHRGQblbtLjs13mfJ-2" value="+ main_menu: MainMenuKeyboard()&lt;br&gt;+&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Sx3DHRGQblbtLjs13mfJ-1">
-          <mxGeometry y="26" width="220" height="114" as="geometry" />
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-2" value="+ excel_parser: ExcelParser" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YPTnmHulrE8OL0PcrKvO-1">
+          <mxGeometry y="26" width="230" height="84" as="geometry" />
         </mxCell>
-        <mxCell id="Sx3DHRGQblbtLjs13mfJ-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="Sx3DHRGQblbtLjs13mfJ-1">
-          <mxGeometry y="140" width="220" height="8" as="geometry" />
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YPTnmHulrE8OL0PcrKvO-1">
+          <mxGeometry y="110" width="230" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="Sx3DHRGQblbtLjs13mfJ-4" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="Sx3DHRGQblbtLjs13mfJ-1">
-          <mxGeometry y="148" width="220" height="26" as="geometry" />
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-4" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YPTnmHulrE8OL0PcrKvO-1">
+          <mxGeometry y="118" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-5" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" edge="1" parent="1" source="YPTnmHulrE8OL0PcrKvO-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="640" y="160" as="sourcePoint" />
+            <mxPoint x="560" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-6" value="ExcelParser" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="10" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-7" value="+ excel_file:&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YPTnmHulrE8OL0PcrKvO-6">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YPTnmHulrE8OL0PcrKvO-6">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="YPTnmHulrE8OL0PcrKvO-9" value="+ get_data_from_db()&lt;br&gt;+ download_excel_file()&lt;br&gt;+ upload_excel_file()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YPTnmHulrE8OL0PcrKvO-6">
+          <mxGeometry y="60" width="160" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
