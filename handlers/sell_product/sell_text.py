@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class OfferingRequests(BaseModel):
+class SellingRequests(BaseModel):
 
     name: str = "<b><i>Отправьте название товара</i></b>"
 

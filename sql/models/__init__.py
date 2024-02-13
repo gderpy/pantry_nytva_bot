@@ -1,5 +1,4 @@
-__all__ = ["ProductRequest"]
+__all__ = ["SellTable"]
 
-
-from .product_request import ProductRequest
+from .base import SellTable
 

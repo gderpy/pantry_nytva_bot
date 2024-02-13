@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class OfferingProcessKeyboard(BaseModel):
+class SellingProcessKeyboard(BaseModel):
     button_0: tuple[str, str] = ("Отправить данные ✅", "send_product_data")
     button_1: tuple[str, str] = ("Назад в меню 📱", "back_to_main_menu")
 

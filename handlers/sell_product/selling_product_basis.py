@@ -1,9 +1,12 @@
 import logging
 
+from sqlalchemy.ext.asyncio import AsyncSession
+
 from bot_requests.reqs import BotRequests
+from sql.models import SellTable
 
 
-class OfferingProduct:
+class SellingProduct:
 
     __COUNT: int = 0
 
@@ -15,7 +18,7 @@ class OfferingProduct:
 
     def __get_req_from_req_obj(self):
         """Получить сообщение от бота из класса с запросами"""
-        offer_reqs = self.bot_reqs.offering_reqs
+        offer_reqs = self.bot_reqs.selling_reqs
         attr_name = self.bot_reqs.get_reqs(reqs_obj=offer_reqs)[self.__COUNT]
         return getattr(offer_reqs, attr_name)
 
@@ -33,6 +36,16 @@ class OfferingProduct:
                 setattr(self, attr, BotRequests())
 
         self.__COUNT = 0
+
+    async def insert_sell_product_data(self, session: AsyncSession):
+        product = SellTable(name=self.name, price=int(self.price))
+        session.add(product)
+        await session.commit()
+         
+         
+
+
+
 
 
 

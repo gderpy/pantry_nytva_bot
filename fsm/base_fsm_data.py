@@ -1,7 +1,7 @@
 from aiogram.fsm.state import State, StatesGroup
 
 
-class FSMOfferingProduct(StatesGroup):
+class FSMSellingProduct(StatesGroup):
     name = State()
     price = State()
     product_link = State()

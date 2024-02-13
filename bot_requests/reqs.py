@@ -1,11 +1,11 @@
-from handlers.offering_product.offer_reqs import OfferingRequests
+from handlers.sell_product.sell_text import SellingRequests
 
 from pydantic import BaseModel
 
 
 class BotRequests:
     def __init__(self):
-        self.offering_reqs = OfferingRequests()
+        self.selling_reqs = SellingRequests()
 
     @staticmethod
     def get_reqs(reqs_obj: BaseModel):
@@ -13,5 +13,5 @@ class BotRequests:
 
 
 bot_reqs = BotRequests()
-offer_reqs = bot_reqs.offering_reqs
+sell_reqs = bot_reqs.selling_reqs
 
