@@ -1,7 +1,10 @@
+import logging
+
 from aiogram import Router, F
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup
 from aiogram.fsm.context import FSMContext
 from aiogram.filters.state import StateFilter, State
+from aiogram.exceptions import TelegramBadRequest
 
 from message_engine import MessageEngine
 from fsm.base_fsm_data import FSMSellProduct, FSMOrderProduct
@@ -93,22 +96,27 @@ async def set_price_sell_product(message: Message,
 
     """Продать товар - стоимость товара"""
 
-    if correct_price(text_price=message.text) == "Неверный формат стоимости. Отправьте повторно":
-        await message.delete()
-        await state.set_state(FSMSellProduct.price)
-        await message_engine.edit_message(text="<b><i>Неверный формат стоимости. Отправьте повторно</i></b>",
+    try:
+        if correct_price(text_price=message.text) == "Неверный формат стоимости. Отправьте повторно":
+            await message.delete()
+            await state.set_state(FSMSellProduct.price)
+            await message_engine.edit_message(text="<b><i>Неверный формат стоимости. Отправьте повторно</i></b>",
+                                              keyboard=inline_base_sell_func_menu)
+
+        else:
+            base_function.price = correct_price(message.text)
+
+            await handle_fsm_sell_and_offer_product(message,
+                                                    state,
+                                                    base_function,
+                                                    message_engine,
+                                                    base_function.bot_text.selling_text,
+                                                    next_state=None,
+                                                    keyboard=inline_base_sell_func_menu_end)
+    except TelegramBadRequest as e:
+        logging.info("Пользователь отправляет неверный формат стоимости по несколько раз")
+        await message_engine.edit_message(text="<b><i>До сих пор неверно!</i></b>",
                                           keyboard=inline_base_sell_func_menu)
-
-    else:
-        base_function.price = correct_price(message.text)
-
-        await handle_fsm_sell_and_offer_product(message,
-                                                state,
-                                                base_function,
-                                                message_engine,
-                                                base_function.bot_text.selling_text,
-                                                next_state=None,
-                                                keyboard=inline_base_sell_func_menu_end)
 
 
 @router.callback_query(F.data == "send_sell_product_data")
