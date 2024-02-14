@@ -15,7 +15,7 @@ router = Router()
 @router.callback_query(F.data == "back_to_main_menu")
 async def handle_start_cmd(msg: Message | CallbackQuery):
 
-    logging.info(f"Пользователь - {msg.from_user.id} нажал на /start")
+    logging.info(f"Пользователь - {msg.from_user.id}")
 
     if isinstance(msg, Message):
         if msg.from_user.id in ADMINS:

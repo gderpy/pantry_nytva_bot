@@ -1,4 +1,4 @@
-__all__ = ["SellTable"]
+__all__ = ["SellTable", "OrderTable"]
 
-from .base import SellTable
+from .base import SellTable, OrderTable
 

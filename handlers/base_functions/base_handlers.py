@@ -10,7 +10,7 @@ from message_engine import MessageEngine
 from fsm.base_fsm_data import FSMSellProduct, FSMOrderProduct
 from keyboards import (inline_base_sell_func_menu, inline_base_sell_func_menu_end,
                        inline_base_order_func_menu, inline_base_order_func_menu_end)
-from sql.models.base import SellTable, OrderTable
+from sql.models import SellTable, OrderTable
 from sql.sql_engine import SQLEngine
 from handlers.base_functions.base_functions_engine import BaseFunctionsEngine
 from handlers.base_functions.utils import (define_type_update, handle_fsm_sell_and_offer_product,
@@ -84,8 +84,8 @@ async def set_name_order_product(message: Message,
                                             base_function,
                                             message_engine,
                                             base_function.bot_text.ordering_text,
-                                            next_state=None,
-                                            keyboard=inline_base_order_func_menu_end)
+                                            next_state=FSMOrderProduct.contact,
+                                            keyboard=inline_base_order_func_menu)
 
 
 @router.message(StateFilter(FSMSellProduct.price))
@@ -111,12 +111,50 @@ async def set_price_sell_product(message: Message,
                                                     base_function,
                                                     message_engine,
                                                     base_function.bot_text.selling_text,
-                                                    next_state=None,
-                                                    keyboard=inline_base_sell_func_menu_end)
+                                                    next_state=FSMSellProduct.contact,
+                                                    keyboard=inline_base_sell_func_menu)
     except TelegramBadRequest as e:
         logging.info("Пользователь отправляет неверный формат стоимости по несколько раз")
         await message_engine.edit_message(text="<b><i>До сих пор неверно!</i></b>",
                                           keyboard=inline_base_sell_func_menu)
+
+
+@router.message(StateFilter(FSMOrderProduct.contact))
+async def set_contact_order_product(message: Message,
+                                    state: FSMContext,
+                                    base_function: BaseFunctionsEngine,
+                                    message_engine: MessageEngine):
+
+    """Заказать товар - оставить контакты"""
+
+    base_function.contact = message.text
+
+    await handle_fsm_sell_and_offer_product(message,
+                                            state,
+                                            base_function,
+                                            message_engine,
+                                            base_function.bot_text.ordering_text,
+                                            next_state=None,
+                                            keyboard=inline_base_order_func_menu_end)
+
+
+@router.message(StateFilter(FSMSellProduct.contact))
+async def set_contact_sell_product(message: Message,
+                                   state: FSMContext,
+                                   base_function: BaseFunctionsEngine,
+                                   message_engine: MessageEngine):
+
+    """Продать товар - оставить контакты"""
+
+    base_function.contact = message.text
+
+    await handle_fsm_sell_and_offer_product(message,
+                                            state,
+                                            base_function,
+                                            message_engine,
+                                            base_function.bot_text.selling_text,
+                                            next_state=None,
+                                            keyboard=inline_base_sell_func_menu_end)
 
 
 @router.callback_query(F.data == "send_sell_product_data")

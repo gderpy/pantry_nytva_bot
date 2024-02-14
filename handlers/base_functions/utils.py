@@ -53,9 +53,10 @@ async def send_base_func_data(callback: CallbackQuery,
 
     if model == OrderTable:
         print("мы тут")
-        data = {"name": base_function.name}
+        data = {"name": base_function.name, "contact": base_function.contact}
     else:
-        data = {"name": base_function.name, "price": int(base_function.price)}
+        data = {"name": base_function.name, "price": int(base_function.price),
+                "contact": base_function.contact}
 
     await sql_engine.insert_objects(model=model, data=data)
     await message_engine.edit_message(text=text, keyboard=keyboard)

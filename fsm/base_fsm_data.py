@@ -1,17 +1,15 @@
 from aiogram.fsm.state import State, StatesGroup
 
 
-class FSMBaseFunctions(StatesGroup):
+class FSMSellProduct(StatesGroup):
     name = State()
     price = State()
-
-
-class FSMSellProduct(FSMBaseFunctions):
-    pass
+    contact = State()
 
 
 class FSMOrderProduct(StatesGroup):
     name = State()
+    contact = State()
 
 
 
