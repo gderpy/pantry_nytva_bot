@@ -1,11 +1,9 @@
 from pydantic import BaseModel
 
 
-class OrderingRequests(BaseModel):
+class OrderingText(BaseModel):
 
     name: str = "<b><i>Отправьте название товара, который желаете заказать</i></b>"
-
-    price: str = "<b><i>Отправьте желаемую стоимость товара</i></b>"
 
     end: str = ("<i>Данные о товаре внесены!</i>\n\n"
                 "<b><i>Нажмите на кнопку ниже, чтобы отправить заявку на товар</i></b>")

@@ -1,10 +1,18 @@
 from aiogram.fsm.state import State, StatesGroup
 
 
-class FSMSellingProduct(StatesGroup):
+class FSMBaseFunctions(StatesGroup):
     name = State()
     price = State()
-    product_link = State()
-    product_photo = State()
-    phone_number = State()
+
+
+class FSMSellProduct(FSMBaseFunctions):
+    pass
+
+
+class FSMOrderProduct(StatesGroup):
+    name = State()
+
+
+
 

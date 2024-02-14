@@ -1,14 +1,14 @@
 from aiogram.utils.keyboard import InlineKeyboardButton, InlineKeyboardMarkup
 
 from keyboards.any_kbs.menu import MainMenu
-from keyboards.any_kbs.selling_kb import SellingProcessKeyboard
+from keyboards.any_kbs.base_func_kb import BaseFunctionsKeyboard
 from keyboards.any_kbs.admin_kb import AdminMenu
 
 
 class Keyboard:
     def __init__(self):
         self.main_menu: MainMenu = MainMenu()
-        self.sell_kb: SellingProcessKeyboard = SellingProcessKeyboard()
+        self.sell_kb: BaseFunctionsKeyboard = BaseFunctionsKeyboard()
         self.admin_panel: AdminMenu = AdminMenu()
 
     @staticmethod
@@ -30,14 +30,26 @@ keyboard = Keyboard()
 
 common_main_menu = keyboard.main_menu.button_layout(admin=False)
 admin_main_menu = keyboard.main_menu.button_layout(admin=True)
-sell_menu = keyboard.sell_kb.button_layout(end=False)
-sell_menu_end = keyboard.sell_kb.button_layout(end=True)
+
+base_sell_func_menu = keyboard.sell_kb.button_layout(end=False, sell=True)
+base_sell_func_menu_end = keyboard.sell_kb.button_layout(end=True, sell=True)
+
+base_order_func_menu = keyboard.sell_kb.button_layout(end=False, sell=False)
+base_order_func_menu_end = keyboard.sell_kb.button_layout(end=True, sell=False)
+
 admin_panel = keyboard.admin_panel.button_layout()
+
+#  ============================================================================= #
 
 inline_common_main_menu = keyboard.create_kb(button_layout=common_main_menu)
 inline_admin_main_menu = keyboard.create_kb(button_layout=admin_main_menu)
-inline_sell_menu = keyboard.create_kb(button_layout=sell_menu)
-inline_sell_menu_end = keyboard.create_kb(button_layout=sell_menu_end)
+
+inline_base_sell_func_menu = keyboard.create_kb(button_layout=base_sell_func_menu)
+inline_base_sell_func_menu_end = keyboard.create_kb(button_layout=base_sell_func_menu_end)
+
+inline_base_order_func_menu = keyboard.create_kb(button_layout=base_order_func_menu)
+inline_base_order_func_menu_end = keyboard.create_kb(button_layout=base_order_func_menu_end)
+
 inline_admin_panel = keyboard.create_kb(button_layout=admin_panel)
 
 

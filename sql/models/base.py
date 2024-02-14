@@ -13,8 +13,11 @@ class MyBase(Base):
     price: Mapped[int] = mapped_column()
 
 
-class OrderTable(MyBase):
+class OrderTable(Base):
     __tablename__ = "order_table"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column()
 
 
 class SellTable(MyBase):

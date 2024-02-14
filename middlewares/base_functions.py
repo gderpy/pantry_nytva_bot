@@ -3,14 +3,12 @@ from typing import Awaitable, Callable, Any
 from aiogram import BaseMiddleware
 from aiogram.types import Message
 
-from handlers.sell_product.selling_product_basis import SellingProduct
-from handlers.order_product.order_product_basis import OrderingProduct
+from handlers.base_functions.base_functions_engine import BaseFunctionsEngine
 
 
 class BaseFunctionsMiddleware(BaseMiddleware):
     def __init__(self):
-        self.selling_product = SellingProduct()
-        self.ordering_product = OrderingProduct()
+        self.base_functions = BaseFunctionsEngine()
 
     async def __call__(
             self,
@@ -19,8 +17,7 @@ class BaseFunctionsMiddleware(BaseMiddleware):
             data: dict[str, Any]
     ) -> Any:
 
-        data["sell_product"] = self.selling_product
-        data["order_product"] = self.ordering_product
+        data["base_function"] = self.base_functions
 
         return await handler(event, data)
 
