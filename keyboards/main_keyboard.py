@@ -38,6 +38,7 @@ base_order_func_menu = keyboard.sell_kb.button_layout(end=False, sell=False)
 base_order_func_menu_end = keyboard.sell_kb.button_layout(end=True, sell=False)
 
 admin_panel = keyboard.admin_panel.button_layout()
+admin_excel_file = keyboard.admin_panel.hide_excel_file()
 
 #  ============================================================================= #
 
@@ -51,6 +52,7 @@ inline_base_order_func_menu = keyboard.create_kb(button_layout=base_order_func_m
 inline_base_order_func_menu_end = keyboard.create_kb(button_layout=base_order_func_menu_end)
 
 inline_admin_panel = keyboard.create_kb(button_layout=admin_panel)
+inline_hide_excel_file = keyboard.create_kb(button_layout=admin_excel_file)
 
 
 

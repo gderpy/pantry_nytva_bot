@@ -1,3 +1,5 @@
+import datetime
+
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State
@@ -52,7 +54,6 @@ async def send_base_func_data(callback: CallbackQuery,
     text = base_function.basic_template(obj_text=obj_text)
 
     if model == OrderTable:
-        print("мы тут")
         data = {"name": base_function.name, "contact": base_function.contact}
     else:
         data = {"name": base_function.name, "price": int(base_function.price),

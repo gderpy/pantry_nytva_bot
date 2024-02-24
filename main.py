@@ -9,6 +9,7 @@ from config.bot_config import API_TOKEN
 from middlewares import BaseFunctionsMiddleware
 from middlewares.message_engine import MessageEngineMiddleware
 from middlewares.sql_engine import SQLEngineMiddleware
+from middlewares.excel_parser import ExcelParserMiddleware
 from sql.sql_engine import SQLEngine
 
 
@@ -24,6 +25,7 @@ class MyBot:
         self.dp.update.middleware(BaseFunctionsMiddleware())
         self.dp.update.middleware(MessageEngineMiddleware())
         self.dp.update.middleware(SQLEngineMiddleware(sql_engine=self.sql_engine))
+        self.dp.update.middleware(ExcelParserMiddleware())
 
         self.dp.include_router(main_routers.router)
 

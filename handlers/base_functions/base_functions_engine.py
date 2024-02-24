@@ -21,7 +21,6 @@ class BaseFunctionsEngine:
 
     def basic_template(self, obj_text: object):
         req = self.__get_req_from_obj_text(obj_text=obj_text)
-        logging.info(self.__COUNT)
         self.__COUNT += 1
         return req
 
