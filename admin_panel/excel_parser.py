@@ -48,6 +48,22 @@ class ExcelParser:
 
                     wb[sheet_name].cell(startrow + ir, startcol + ic).value = obj_data[ir][ic]
 
+    def read_excel_file(self):
+        path = Path.cwd().parent / "excel_files" / "Excel-файл шаблон.xlsx"
+        wb = ox.load_workbook(filename=path)
+
+        sheetnames = ["Смартфоны", "Лэтуаль", "Детские товары", "Электроника", "Электроинструменты",
+                      "Телевизоры", "Ноутбуки"]
+
+        ws = wb["Смартфоны"]
+
+        row_data = []
+
+        for i in range(1, 11):
+            row_data.append(ws.cell(row=2, column=i).value)
+
+        return row_data
+
     async def __get_data_from_db_table(self, model: Base) -> list:
         async with self.session() as session:
             stmt = select(model)
@@ -76,6 +92,15 @@ class ExcelParser:
                                        wb=wb)
 
         wb.save(filename=self.excel_template_path)
+
+    async def upload_excel_file(self):
+        pass
+
+
+
+
+
+
 
 
 

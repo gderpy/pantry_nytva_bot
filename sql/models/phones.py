@@ -10,6 +10,13 @@ class PhoneTable(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column()
     price: Mapped[int] = mapped_column()
+    cpu: Mapped[str] = mapped_column()
+    ram: Mapped[int] = mapped_column()
+    storage: Mapped[int] = mapped_column()
+    display: Mapped[str] = mapped_column()
+    battery: Mapped[str] = mapped_column()
+    sim: Mapped[int] = mapped_column()
+    camera: Mapped[str] = mapped_column()
     description: Mapped[str] = mapped_column()
     category_id: Mapped[int] = mapped_column(ForeignKey("categories.id"))
 
