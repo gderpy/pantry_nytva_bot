@@ -2,13 +2,14 @@ from typing import Awaitable, Callable, Any
 
 from aiogram import BaseMiddleware
 from aiogram.types import Message
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-from handlers.offering_product.offering_product_basis import OfferingProduct
+from sql.sql_engine import SQLEngine
 
 
-class OfferingProductMiddleware(BaseMiddleware):
-    def __init__(self):
-        self.offering_product = OfferingProduct()
+class SQLEngineMiddleware(BaseMiddleware):
+    def __init__(self, sql_engine: SQLEngine):
+        self.sql_engine = sql_engine
 
     async def __call__(
             self,
@@ -17,7 +18,7 @@ class OfferingProductMiddleware(BaseMiddleware):
             data: dict[str, Any]
     ) -> Any:
 
-        data["offer_product"] = self.offering_product
+        data["sql_engine"] = self.sql_engine
 
         return await handler(event, data)
 

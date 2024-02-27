@@ -7,8 +7,7 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from alembic import context
 
-from sql import Base
-from sql.models import ProductRequest
+from sql.models.base import Base
 from config.db_config import postgres_url
 
 # this is the Alembic Config object, which provides

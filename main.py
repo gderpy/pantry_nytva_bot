@@ -1,16 +1,17 @@
 import asyncio
 import logging
-import sys
 
 import main_routers
 
 from aiogram import Bot, Dispatcher
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
 from config.bot_config import API_TOKEN
-from config.db_config import postgres_url
-from middlewares.offer import OfferingProductMiddleware
+from middlewares import BaseFunctionsMiddleware
 from middlewares.message_engine import MessageEngineMiddleware
+from middlewares.sql_engine import SQLEngineMiddleware
+from middlewares.excel_parser import ExcelParserMiddleware
+from sql.sql_engine import SQLEngine
+
 
 
 class MyBot:
@@ -18,13 +19,14 @@ class MyBot:
         self.bot = Bot(token=API_TOKEN, parse_mode="HTML")
         self.dp = Dispatcher()
 
-        self.engine = create_async_engine(url=postgres_url, echo=True)
-        self.async_session = async_sessionmaker(bind=self.engine, expire_on_commit=False)
+        self.sql_engine = SQLEngine()
 
     async def on_startup(self):
 
-        self.dp.update.middleware(OfferingProductMiddleware())
+        self.dp.update.middleware(BaseFunctionsMiddleware())
         self.dp.update.middleware(MessageEngineMiddleware())
+        self.dp.update.middleware(SQLEngineMiddleware(sql_engine=self.sql_engine))
+        self.dp.update.middleware(ExcelParserMiddleware())
 
         self.dp.include_router(main_routers.router)
 

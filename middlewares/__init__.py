@@ -1,5 +1,4 @@
-__all__ = ["OfferingProductMiddleware"]
+__all__ = ["BaseFunctionsMiddleware"]
 
 
-from .offer import OfferingProductMiddleware
-
+from .base_functions import BaseFunctionsMiddleware
