@@ -12,6 +12,12 @@ class AdminMenu(BaseModel):
                                                                     excel_parser_download=1
                                  ).pack())
 
+    button_5: tuple[str, str] = ("Отменить действие ❌", AdminCF(excel_parser=1,
+                                                                 excel_parser_cancel_upload=1).pack())
+
+    button_6: tuple[str, str] = ("Начать выгрузку данных в каталог 📥", AdminCF(excel_parser=1,
+                                                                                excel_parser_upload=1).pack())
+
     def button_layout(self, admin=True):
 
         keyboard = [
@@ -26,6 +32,17 @@ class AdminMenu(BaseModel):
     def hide_excel_file(self):
         return [
             [self.button_4]
+        ]
+
+    def excel_parser_cancel_upload(self):
+        return [
+            [self.button_5]
+        ]
+
+    def start_to_upload_data_from_excel_file_kb(self):
+        return [
+            [self.button_6],
+            [self.button_5]
         ]
 
 

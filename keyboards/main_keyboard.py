@@ -41,6 +41,8 @@ base_order_func_menu_end = keyboard.sell_kb.button_layout(end=True, sell=False)
 
 admin_panel = keyboard.admin_panel.button_layout()
 admin_excel_file = keyboard.admin_panel.hide_excel_file()
+admin_cancel_upload_excel_file = keyboard.admin_panel.excel_parser_cancel_upload()
+admin_start_to_upload_data_from_excel_file = keyboard.admin_panel.start_to_upload_data_from_excel_file_kb()
 
 catalog_menu = keyboard.catalog_menu.button_layout()
 catalog_menu_electronic_section = keyboard.catalog_menu.electronic_section()
@@ -58,6 +60,8 @@ inline_base_order_func_menu_end = keyboard.create_kb(button_layout=base_order_fu
 
 inline_admin_panel = keyboard.create_kb(button_layout=admin_panel)
 inline_hide_excel_file = keyboard.create_kb(button_layout=admin_excel_file)
+inline_admin_cancel_upload_excel_file = keyboard.create_kb(button_layout=admin_cancel_upload_excel_file)
+inline_start_to_upload_data_from_excel_file = keyboard.create_kb(button_layout=admin_start_to_upload_data_from_excel_file)
 
 inline_catalog_menu = keyboard.create_kb(button_layout=catalog_menu)
 inline_catalog_menu_electronic_section = keyboard.create_kb(button_layout=catalog_menu_electronic_section)

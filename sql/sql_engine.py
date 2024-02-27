@@ -1,9 +1,10 @@
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy import select
+from sqlalchemy import select, delete
 
 from config.db_config import postgres_url
 from sql.models import SellTable
+from sql.models.categories import CategoriesTable
 
 
 class SQLEngine:
@@ -28,6 +29,24 @@ class SQLEngine:
 
             for data in res.scalars():
                 print(f"data - {data}")
+
+            await session.commit()
+
+    async def get_category_id_from_categories(self, sheet_name: str):
+        """Получить id определенной категории, чтобы установить внешний ключ"""
+        async with self.async_session() as session:
+            stmt = select(CategoriesTable.id).where(CategoriesTable.name == sheet_name)
+            res = await session.execute(stmt)
+
+            await session.commit()
+
+            for data_category_id in res.scalars():
+                return data_category_id
+
+    async def clear_the_tables(self, model: DeclarativeBase):
+        async with self.async_session() as session:
+            stmt = delete(model)
+            await session.execute(stmt)
 
             await session.commit()
 
