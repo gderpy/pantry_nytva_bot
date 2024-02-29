@@ -51,6 +51,11 @@ class SQLEngine:
             await session.commit()
 
 
+    async def display_a_product_of_a_specific_category(self):
+        async with self.async_session() as session:
+            stmt = select(CategoriesTable).join()
+
+
 
 
 
