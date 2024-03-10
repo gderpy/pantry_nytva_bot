@@ -1,10 +1,11 @@
+import asyncio
+
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy import select, delete
+from sqlalchemy import select, delete, text, func
 
 from config.db_config import postgres_url
-from sql.models import SellTable
-from sql.models.categories import CategoriesTable
+from sql.models import SellsTable, AllProductsTable
 
 
 class SQLEngine:
@@ -35,13 +36,20 @@ class SQLEngine:
     async def get_category_id_from_categories(self, sheet_name: str):
         """Получить id определенной категории, чтобы установить внешний ключ"""
         async with self.async_session() as session:
-            stmt = select(CategoriesTable.id).where(CategoriesTable.name == sheet_name)
+            stmt = select(AllProductsTable.id).order_by()
             res = await session.execute(stmt)
 
             await session.commit()
 
             for data_category_id in res.scalars():
                 return data_category_id
+
+    async def get_last_id(self):
+        async with self.async_session() as session:
+            stmt = select(AllProductsTable).order_by(AllProductsTable.id.desc()).limit(1)
+            res = await session.scalar(stmt)
+            await session.commit()
+            return res.id
 
     async def clear_the_tables(self, model: DeclarativeBase):
         async with self.async_session() as session:
@@ -50,10 +58,36 @@ class SQLEngine:
 
             await session.commit()
 
-
-    async def display_a_product_of_a_specific_category(self):
+    async def count_products_in_category(self, model: DeclarativeBase):
         async with self.async_session() as session:
-            stmt = select(CategoriesTable).join()
+            stmt = select(func.count(model.id))
+            res = await session.scalar(stmt)
+            await session.commit()
+            print(f"res: {res}")
+            return res
+
+    async def display_a_product_of_a_specific_category(self, category: str):
+        async with self.async_session() as session:
+
+            stmt = select(AllProductsTable).where(AllProductsTable.category == category)
+            res = await session.execute(stmt)
+
+            await session.commit()
+
+            product_and_price = {}
+
+            def format_price(price):
+                return "{:,}".format(price).replace(",", " ")
+
+            for number, data in enumerate(res.scalars(), start=1):
+                product_and_price[number] = f"{data.name} - {format_price(data.price)} руб"
+
+            print(f"product_and_price: {product_and_price}")
+            return product_and_price
+
+
+sql = SQLEngine()
+asyncio.run(sql.display_a_product_of_a_specific_category(category="Телевизоры"))
 
 
 

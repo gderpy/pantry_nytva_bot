@@ -7,7 +7,7 @@ from callback_factory.admin_callback import AdminCF
 from admin_panel.excel_parser import ExcelParser
 from keyboards import inline_hide_excel_file
 from sql.sql_engine import SQLEngine
-from sql.models import SellTable, OrderTable
+from sql.models import SellsTable, OrdersTable
 
 
 router = Router()

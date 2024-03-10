@@ -10,7 +10,7 @@ from message_engine import MessageEngine
 from fsm.base_fsm_data import FSMSellProduct, FSMOrderProduct
 from keyboards import (inline_base_sell_func_menu, inline_base_sell_func_menu_end,
                        inline_base_order_func_menu, inline_base_order_func_menu_end)
-from sql.models import SellTable, OrderTable
+from sql.models import SellsTable, OrdersTable
 from sql.sql_engine import SQLEngine
 from handlers.base_functions.base_functions_engine import BaseFunctionsEngine
 from handlers.base_functions.utils import (define_type_update, handle_fsm_sell_and_offer_product,
@@ -30,6 +30,10 @@ async def handle_base_functions(callback: CallbackQuery,
 
     # Сброс к первоначальным данным
     base_function.default_properties()
+
+    # Определяем запрос от пользователя: какую кнопку он нажал 'Продажа'/'Заявка'
+    # obj_text: Объект, который содержит текст для процесса FSM
+    # fsm_arg: Объект FSM с состояниями 'Продажа'/'Заявка'
     
     if callback.data == "sell_a_product":
         obj_text = base_function.bot_text.selling_text
@@ -172,7 +176,7 @@ async def handle_sent_sell_data(callback: CallbackQuery,
                               message_engine,
                               sql_engine,
                               obj_text,
-                              SellTable,
+                              SellsTable,
                               inline_base_sell_func_menu)
 
 
@@ -191,6 +195,6 @@ async def handle_sent_order_data(callback: CallbackQuery,
                               message_engine,
                               sql_engine,
                               obj_text,
-                              OrderTable,
+                              OrdersTable,
                               inline_base_order_func_menu)
 

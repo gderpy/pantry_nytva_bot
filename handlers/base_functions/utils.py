@@ -9,7 +9,7 @@ from message_engine import MessageEngine
 from keyboards.main_keyboard import (inline_base_sell_func_menu, inline_base_sell_func_menu_end,
                                      inline_base_order_func_menu_end)
 from sql.sql_engine import SQLEngine
-from sql.models.base import SellTable, OrderTable
+from sql.models import SellsTable, OrdersTable
 
 
 def choose_inline_keyboard(sell: bool, order: bool):
@@ -47,17 +47,21 @@ async def send_base_func_data(callback: CallbackQuery,
                               message_engine: MessageEngine,
                               sql_engine: SQLEngine,
                               obj_text: object,
-                              model: SellTable | OrderTable,
+                              model: SellsTable | OrdersTable,
                               keyboard: InlineKeyboardMarkup):
 
     message_engine.event = callback
     text = base_function.basic_template(obj_text=obj_text)
 
-    if model == OrderTable:
+    print(base_function.name, base_function.price, base_function.contact)
+
+    if model == OrdersTable:
         data = {"name": base_function.name, "contact": base_function.contact}
     else:
         data = {"name": base_function.name, "price": int(base_function.price),
                 "contact": base_function.contact}
+
+        print(f"data - {data}")
 
     await sql_engine.insert_objects(model=model, data=data)
     await message_engine.edit_message(text=text, keyboard=keyboard)

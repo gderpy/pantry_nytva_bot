@@ -8,9 +8,9 @@ class BaseFunctionsEngine:
     __COUNT: int = 0
 
     def __init__(self):
-        self.name: str = "...."
-        self.price: str | int = "...."
-        self.contact: str = "...."
+        self.name: str | None = None
+        self.price: int | None = None
+        self.contact: str | None = "...."
 
         self.bot_text = BotText()
 

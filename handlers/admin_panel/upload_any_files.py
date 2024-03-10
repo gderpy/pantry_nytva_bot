@@ -13,7 +13,7 @@ router = Router()
 # "document": {
 #       "file_id": "BQACAgIAAxkBAAIBqWXc7gqqTE1ZAjY3E-EXiLYNUXF4AAIISwACXEHpSr-Hu2LjvKeRNAQ",
 #       "file_unique_id": "AgADCEsAAlxB6Uo",
-#       "file_name": "Ваш Excel-файл.xlsx",
+#       "file_name": "Обновленный Excel-файл.xlsx",
 #       "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 #       "file_size": 5453
 #    }

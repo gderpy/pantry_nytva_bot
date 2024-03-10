@@ -1,22 +1,20 @@
 import logging
 import os
 
-import pandas as pd
 import openpyxl as ox
 
 from pathlib import Path
 from openpyxl import Workbook
 
-from aiogram.types import File, CallbackQuery, BufferedInputFile, Message
+from aiogram.types import BufferedInputFile, Message
 from aiogram import Bot
 from sqlalchemy import select, Integer
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import DeclarativeBase
 
 from sql.sql_engine import SQLEngine
-from sql.models import (OrderTable, SellTable, ElectronicTable, PhoneTable, LaptopTable,
-                        CosmeticsTable, ChildrenGoodsTable, PowerToolsTable, TvTable)
-from sql.models.base import Base
+from sql.models.categories_models import (PhonesTable, TvTable, LaptopsTable, CosmeticsTable,
+                                          PowerToolsTable, ElectronicTable, ChildrenGoodsTable)
+from sql.models import Base, SellsTable, OrdersTable, AllProductsTable
 
 
 class ExcelParser:
@@ -25,8 +23,7 @@ class ExcelParser:
     chat_id: int
 
     def __init__(self):
-        self.excel_template_path: Path = Path.cwd() / "excel_files/Excel-файл шаблон.xlsx"
-        self.excel_template_path: Path = Path.cwd() / "excel_files/Excel-файл шаблон.xlsx"
+        self.excel_template_path: Path = Path.cwd() / "excel_files/Обновленный Excel-файл.xlsx"
         self.session = SQLEngine().async_session
         self.sql_engine = SQLEngine()
         self.sheet_names = ["Смартфоны", "Лэтуаль", "Детские товары", "Электроника",
@@ -61,7 +58,7 @@ class ExcelParser:
             raise ValueError("Данная категория отсутствует в БД")
 
         if sheet_name == "Смартфоны":
-            return PhoneTable
+            return PhonesTable
         elif sheet_name == "Лэтуаль":
             return CosmeticsTable
         elif sheet_name == "Детские товары":
@@ -73,7 +70,7 @@ class ExcelParser:
         elif sheet_name == "Телевизоры":
             return TvTable
         elif sheet_name == "Ноутбуки":
-            return LaptopTable
+            return LaptopsTable
 
     @staticmethod
     def __format_the_value_in_the_numeric_columns(value: str):
@@ -86,7 +83,7 @@ class ExcelParser:
 
         integer_columns = []
 
-        for column_name in model.get_column_names():
+        for column_name in model.collect_column_names():
             column = getattr(model, column_name)
             column_type = column.type
 
@@ -101,33 +98,46 @@ class ExcelParser:
 
         excel_data = {}
 
+        await self.sql_engine.clear_the_tables(model=AllProductsTable)
+
         for sheet_name in self.sheet_names:
+
             ws = wb[sheet_name]
             excel_data[sheet_name] = {}
-            # {"Смартфоны": {}}
 
-            category_id = await self.sql_engine.get_category_id_from_categories(sheet_name=sheet_name)
-            print(category_id)
+            # excel_data = {"Смартфоны": {}}
 
             model = self.__define_model_for_sheet_name(sheet_name=sheet_name)
             integer_columns = self.__get_a_list_of_integer_columns(model)
 
+            logging.info(f"integer_columns: {integer_columns}")
+
             for row_number in range(2, ws.max_row + 1):
+
                 if ws.cell(row=row_number, column=1).value is not None:
                     excel_data[sheet_name][row_number - 1] = {}
+                    # excel_data = {"Смартфоны": {1: {}}}
                     row_data = []
 
-                    for column_number in range(1, ws.max_column + 1):
+                    # Получаем название и стоимость товара
+                    get_name_price = lambda x: ws.cell(row=row_number, column=x).value
+                    product = {"name": get_name_price(1),
+                               "price": get_name_price(2),
+                               "category": sheet_name}
 
-                        if (column_number == 1 and
-                                ws.cell(row=row_number, column=column_number).value is None):
-                            break
+                    # Вставляем данные в нашу таблицу
+                    await self.sql_engine.insert_objects(AllProductsTable, data=product)
 
-                        cell_value = ws.cell(row=row_number, column=column_number).value
+                    product_id = await self.sql_engine.get_last_id()
+
+                    # Проходимся циклом по колонкам
+                    for column_number in range(3, ws.max_column + 1):
+
+                        cell_value = str(ws.cell(row=row_number, column=column_number).value)
 
                         row_data.append(cell_value)
 
-                        for key, value in zip(model.get_column_names(), row_data):
+                        for key, value in zip(model.collect_column_names(), row_data):
                             print(f"key: {key}, integer_columns: {integer_columns}")
 
                             if key in integer_columns and value is not None:
@@ -136,7 +146,9 @@ class ExcelParser:
                                     value = self.__format_the_value_in_the_numeric_columns(value)
 
                             excel_data[sheet_name][row_number - 1][key] = value
-                            excel_data[sheet_name][row_number - 1]["category_id"] = category_id
+                            excel_data[sheet_name][row_number - 1]["product_id"] = product_id
+                else:
+                    break
 
         return excel_data
 
@@ -160,6 +172,7 @@ class ExcelParser:
             obj_data: list = []
 
             for data in res.scalars():
+                print(data)
                 obj_data.append(data.as_list())
 
             await session.commit()
@@ -167,8 +180,8 @@ class ExcelParser:
 
     async def download_excel_file(self):
 
-        obj_data_orders = await self.__get_data_from_db_table(model=OrderTable)
-        obj_data_sells = await self.__get_data_from_db_table(model=SellTable)
+        obj_data_orders = await self.__get_data_from_db_table(model=OrdersTable)
+        obj_data_sells = await self.__get_data_from_db_table(model=SellsTable)
 
         logging.info(f"obj_data_orders: {obj_data_orders}")
         logging.info(f"obj_data_sells: {obj_data_sells}")
@@ -181,8 +194,8 @@ class ExcelParser:
 
         wb.save(filename=self.excel_template_path)
 
-
-    async def save_the_attached_file(self, message: Message, file_id, file_path):
+    @staticmethod
+    async def save_the_attached_file(message: Message, file_id, file_path):
         file = await message.bot.get_file(file_id=file_id)
         downloaded_file = await message.bot.download_file(file.file_path)
         save_dir = Path.cwd() / "excel_files"
@@ -194,16 +207,6 @@ class ExcelParser:
         return save_path
 
 
-
-
-
-
-# ex = ExcelParser()
-# for key, value in ex.read_excel_file().items():
-#     print(f"{key}:\n")
-#     for key2, value2 in value.items():
-#         print(f"{key2}: {value2}")
-#     print()
 
 
 

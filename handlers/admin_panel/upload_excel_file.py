@@ -16,14 +16,14 @@ router = Router()
 @router.callback_query(F.data == AdminCF(excel_parser_upload=1).pack())
 async def press_button_to_upload_excel_file(callback: CallbackQuery, message_engine: MessageEngine):
 
-    message_answer = await callback.message.edit_text(
+    message_answer = callback.message.edit_text(
         text="Для выгрузки данных из Excel-файла просто приложите "
              "его через интерфейс телеграма 📎",
         reply_markup=inline_admin_cancel_upload_excel_file)
 
     message_engine.message_id = message_answer.message_id
 
-    message_answer
+    await message_answer
 
     print(callback.model_dump_json(indent=4, exclude_none=True))
     await callback.answer()
@@ -49,6 +49,9 @@ async def parser_data_from_excel_to_tables(callback: CallbackQuery,
         text="Данные внесены в каталог!",
         reply_markup=inline_admin_main_menu
     )
+
+
+
 
 
 
