@@ -68,3 +68,5 @@ inline_catalog_menu_electronic_section = keyboard.create_kb(button_layout=catalo
 
 
 
+
+

@@ -20,5 +20,8 @@ class SQLEngineMiddleware(BaseMiddleware):
 
         data["sql_engine"] = self.sql_engine
 
+        async with self.sql_engine.async_session() as session:
+            data["session"] = session
+
         return await handler(event, data)
 

@@ -5,11 +5,13 @@ from aiogram.types import Message
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
 from handlers.catalog.catalog_display import CatalogDisplay
+from handlers.product_display.product_page import ProductPage
 
 
 class CatalogDisplayMiddleware(BaseMiddleware):
     def __init__(self):
         self.catalog_display = CatalogDisplay()
+        self.product_page = ProductPage()
 
     async def __call__(
             self,
@@ -19,5 +21,6 @@ class CatalogDisplayMiddleware(BaseMiddleware):
     ) -> Any:
 
         data["catalog_display"] = self.catalog_display
+        data["product_page"] = self.product_page
 
         return await handler(event, data)

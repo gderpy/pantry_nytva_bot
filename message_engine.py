@@ -24,8 +24,6 @@ class MessageEngine:
 
     async def edit_message(self, text: str, keyboard: InlineKeyboardMarkup | None):
 
-        logging.info(f"self.message_id = {self.message_id}")
-
         if isinstance(self.event, Message):
             message = self.event
             await message.bot.edit_message_text(text=text,

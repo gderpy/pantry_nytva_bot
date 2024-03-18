@@ -33,20 +33,14 @@ async def open_electronic_section(callback: CallbackQuery):
 @router.callback_query(CatalogCF.filter(F.paginator.in_({"next_page", "previous_page"})))
 @get_products_from_category
 @show_alert_if_products_are_missing
-async def open_phones_section(callback: CallbackQuery,
-                              category: str,
-                              table_category: str,
-                              products: dict,
-                              current_page: int,
-                              check: bool,
-                              sql_engine: SQLEngine,
-                              catalog_display: CatalogDisplay):
-
-    logging.info(f"callback_data: {callback.data}")
-
-    logging.info(f"category: {category}")  # catalog:phones:0:1:2:0
-    logging.info(f"products: {products}")
-    logging.info(f"current_page: {current_page}")
+async def open_category_section(callback: CallbackQuery,
+                                category: str,
+                                table_category: str,
+                                products: dict,
+                                current_page: int,
+                                check: bool,
+                                catalog_display: CatalogDisplay,
+                                **kwargs):
 
     if check is True:
         await callback.message.edit_text(
@@ -59,7 +53,6 @@ async def open_phones_section(callback: CallbackQuery,
 
 @router.callback_query
 async def catch_other_callbacks(callback: CallbackQuery):
-    logging.info(f"callback_other: {callback.data}")
     await callback.answer()
 
 

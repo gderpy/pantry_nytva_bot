@@ -16,7 +16,6 @@ from middlewares.catalog_display import CatalogDisplayMiddleware
 from sql.sql_engine import SQLEngine
 
 
-
 class MyBot:
     def __init__(self):
         self.bot = Bot(token=API_TOKEN, parse_mode="HTML")

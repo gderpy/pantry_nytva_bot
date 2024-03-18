@@ -16,8 +16,13 @@ class CatalogCF(CallbackData, prefix="catalog"):
     page: int = 1
 
 
-c = CatalogCF(paginator=Paginator.next_page).pack()
-print(c)
+class ProductCF(CallbackData, prefix="product"):
+    category: str | int = 0
+    product_number: int = 0
+    from_page: int = 1
+    product_id: int
+
+
 
 
 

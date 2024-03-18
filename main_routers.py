@@ -1,6 +1,6 @@
 from aiogram import Router
 
-from handlers import start_handlers, admin_panel, base_functions, catalog
+from handlers import start_handlers, admin_panel, base_functions, catalog, product_display
 from handlers.admin_panel import download_excel_file
 from handlers.admin_panel import upload_excel_file
 from handlers.admin_panel import upload_any_files
@@ -13,6 +13,7 @@ router.include_router(upload_excel_file.router)
 router.include_router(upload_any_files.router)
 router.include_router(base_functions.router)
 router.include_router(catalog.router)
+router.include_router(product_display.router)
 
 
 

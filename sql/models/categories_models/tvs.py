@@ -13,3 +13,16 @@ class TvTable(Base):
     hdr: Mapped[str]
     description: Mapped[str]
     product_id: Mapped[fk_product_id]
+
+    def __repr__(self):
+        return (f"TvTable: "
+                f"id: {self.id}, "
+                f"display: {self.display}, "
+                f"qled: {self.qled}, "
+                f"smart_tv: {self.smart_tv}, "
+                f"hdr: {self.hdr}, "
+                f"description: {self.description}, "
+                f"product_id: {self.product_id}")
+
+    def __str__(self):
+        return self.__repr__()

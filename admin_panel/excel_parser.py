@@ -183,9 +183,6 @@ class ExcelParser:
         obj_data_orders = await self.__get_data_from_db_table(model=OrdersTable)
         obj_data_sells = await self.__get_data_from_db_table(model=SellsTable)
 
-        logging.info(f"obj_data_orders: {obj_data_orders}")
-        logging.info(f"obj_data_sells: {obj_data_sells}")
-
         wb = ox.load_workbook(filename=self.excel_template_path)
 
         self.__unload_orders_and_sells(order_table_data=obj_data_orders,

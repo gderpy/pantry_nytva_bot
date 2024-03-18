@@ -16,7 +16,31 @@ class PhonesTable(Base):
     description: Mapped[str]
     product_id: Mapped[fk_product_id]
 
+    def __str__(self):
+        return (f"PhonesTable: "
+                f"cpu: {self.cpu}, "
+                f"ram: {self.ram}, "
+                f"storage: {self.storage}, "
+                f"display: {self.display}, "
+                f"battery: {self.battery}, "
+                f"sim: {self.sim}, "
+                f"camera: {self.camera}, "
+                f"description: {self.description}")
 
-print(PhonesTable.collect_column_names())
+    def __repr__(self):
+        return self.__str__()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -1,13 +1,10 @@
 import logging
 
 from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, func
 from aiogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 from sql.sql_engine import SQLEngine
-from sql.models import AllProductsTable
-from callback_factory.catalog_callbacks import CatalogCF, Paginator
+from callback_factory.catalog_callbacks import CatalogCF, Paginator, ProductCF
 
 
 class CatalogDisplay:
@@ -70,8 +67,8 @@ class CatalogDisplay:
 
         buttons_list: list[list[InlineKeyboardButton]] = []
 
-        start_index = 1 if current_page == 1 else current_page * 8 - 8
-        end_index = 8 if current_page == 1 else current_page * 8
+        start_index = 1 if current_page == 1 else current_page * 8 - 7
+        end_index = 9 if current_page == 1 else current_page * 8 + 1
 
         number_pages = products_number // 8 if products_number % 8 == 0 \
             else products_number // 8 + 1
@@ -85,18 +82,19 @@ class CatalogDisplay:
                     buttons_menu = buttons_list + [[back_categories_button]]
                 return InlineKeyboardMarkup(inline_keyboard=buttons_menu)
             else:
-                name = products[i]
+                name = products[i]["catalog_name"]
                 buttons_list.append([InlineKeyboardButton(
                                 text=name,
-                                callback_data=CatalogCF(product_number=i).pack())])
-
-        logging.info(f"flag_1 - current_page > products_number // 8 - {current_page} > {products_number} // 8")
+                                callback_data=ProductCF(category=category,
+                                                        product_number=i,
+                                                        from_page=current_page,
+                                                        product_id=products[i]["id"]).pack())])
 
         if current_page == 1 and products_number > 8:
             buttons_list += [[forward_button],
                              [back_categories_button]]
 
-        elif current_page > products_number // 8:
+        elif current_page > products_number // 8:  # 2 >= 2
             buttons_list += [[backward_button],
                              [back_categories_button]]
 

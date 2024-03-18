@@ -5,15 +5,19 @@ from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import select, delete, text, func
 
 from config.db_config import postgres_url
-from sql.models import SellsTable, AllProductsTable
+from sql.models import SellsTable, AllProductsTable, Base
+from sql.models.categories_models import (PhonesTable, CosmeticsTable, ChildrenGoodsTable,
+                                          ElectronicTable, PowerToolsTable, TvTable, LaptopsTable)
 
 
 class SQLEngine:
+
     def __init__(self):
         self.engine = create_async_engine(url=postgres_url, echo=True)
 
         self.async_session: async_sessionmaker[AsyncSession] = (
             async_sessionmaker(bind=self.engine, expire_on_commit=False))
+
 
     async def insert_objects(self, model: DeclarativeBase, data: dict):
         async with self.async_session() as session:
@@ -80,14 +84,26 @@ class SQLEngine:
                 return "{:,}".format(price).replace(",", " ")
 
             for number, data in enumerate(res.scalars(), start=1):
-                product_and_price[number] = f"{data.name} - {format_price(data.price)} руб"
+                # product_and_price[number] = f"{data.name} - {format_price(data.price)} руб"
+                product_and_price[number] = {
+                    "catalog_name": f"{data.name} - {format_price(data.price)} руб",
+                    "id": data.id
+                }
 
-            print(f"product_and_price: {product_and_price}")
             return product_and_price
 
+    async def define_product_id(self, product_name: str):
+        async with self.async_session() as session:
 
-sql = SQLEngine()
-asyncio.run(sql.display_a_product_of_a_specific_category(category="Телевизоры"))
+            stmt = select(AllProductsTable).where(AllProductsTable.name == product_name)
+            res = await session.execute(stmt)
+            product = res.scalars().first()
+            print(product.id)
+            await session.commit()
+            return product.id
+
+
+
 
 
 

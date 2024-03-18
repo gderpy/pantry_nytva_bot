@@ -20,12 +20,10 @@ categories_dict = {
 def get_products_from_category(func):
     @wraps(func)
     async def wrapped(callback: CallbackQuery, sql_engine: SQLEngine, *args, **kwargs):
-        # logging.info(f"args: {args}, kwargs: {kwargs}")
 
         # Достаем название категории из CallbackFactory
         new_instance_callback = CatalogCF.unpack(value=callback.data)
         category = new_instance_callback.category
-        # logging.info(f"category: {category}")
 
         # Определяем текущую страницу каталога
         if new_instance_callback.paginator == "next_page":
@@ -54,15 +52,14 @@ def get_products_from_category(func):
 def show_alert_if_products_are_missing(func):
     @wraps(func)
     async def wrapped(*args, **kwargs):
-        logging.info("show_alert_if_products_are_missing")
-        logging.info(f"args: {args}, kwargs: {kwargs}")
+        # logging.info("show_alert_if_products_are_missing")
+        # logging.info(f"args: {args}, kwargs: {kwargs}")
 
         if "callback" in kwargs and "products" in kwargs:
             callback = kwargs["callback"]
             products = kwargs["products"]
 
             check = False
-            logging.info(f"products: {products}")
 
             if len(products) == 0:
                 return await callback.answer(
