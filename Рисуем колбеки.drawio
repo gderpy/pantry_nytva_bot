@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-21T07:52:21.077Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="-C3MPUuQxY67BBXIVEgU" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-21T09:44:40.728Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="yo0CJKaRjaDOtSVytEOp" version="24.0.7" type="github">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
     <mxGraphModel dx="1105" dy="1430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -107,23 +107,23 @@
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-33" value="CatalogCF&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=%phones%&amp;nbsp;&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;paginator=0&lt;/div&gt;&lt;div&gt;page=1&lt;/div&gt;&lt;div&gt;photo=1&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;catalog_cd: catalog:phones:0:0:1:1&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
           <mxGeometry x="1310" y="425" width="240" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-34" value="Товар без фото&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="595" width="240" height="95" as="geometry" />
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-34" value="Товар без фото&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="900" width="240" height="95" as="geometry" />
         </mxCell>
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-35" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="830" y="595" width="240" height="95" as="geometry" />
+          <mxGeometry x="752.5" y="590" width="240" height="95" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-36" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1360" y="595" width="240" height="95" as="geometry" />
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-36" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="830" width="240" height="107.5" as="geometry" />
         </mxCell>
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-37" value="Товар с фото - если добавлено максимальное количество фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1600" y="595" width="240" height="110" as="geometry" />
+          <mxGeometry x="1160" y="950" width="240" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-38" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1840" y="595" width="240" height="125" as="geometry" />
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-38" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Еще фото&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1840" y="595" width="240" height="145" as="geometry" />
         </mxCell>
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-40" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="970" y="720" width="190" height="60" as="geometry" />
+          <mxGeometry x="1880" y="1000" width="190" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-41" value="Кнопка товара" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="770" y="370" width="180" height="40" as="geometry" />
@@ -133,6 +133,33 @@
         </mxCell>
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-43" value="Кнопка товара" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1700" y="410" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-44" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="795" width="240" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-45" value="Фото добавлено (+2)&lt;div&gt;Продолжить&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1467.5" y="710" width="135" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-46" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1840" y="780" width="240" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-47" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Отображение последнего фото&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="750" width="240" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-48" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Отображение 2/3 фото&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2510" y="750" width="240" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-49" value="Товар без фото&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="995" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-50" value="Товар (фото еще не добавлено)&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="710" width="240" height="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-51" value="&lt;div&gt;Выберите фото для удаления (доступно несколько фото для удаления)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Отменить&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="810" width="240" height="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-52" value="&lt;div&gt;Выберите фото для удаления&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Отменить&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="935" width="240" height="107.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
