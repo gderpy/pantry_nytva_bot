@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-21T07:23:06.084Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="SA4UqhY7e2e0okdnnG8z" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-21T07:52:21.077Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="-C3MPUuQxY67BBXIVEgU" version="24.0.7" type="github">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
     <mxGraphModel dx="1105" dy="1430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -130,6 +130,9 @@
         </mxCell>
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-42" value="kb = [&lt;div&gt;Добавить в корзину - add_to_cart,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Назад в каталог -&amp;nbsp; закинуть сюда наш прошлый callback_data -&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;message_engine.catalog_cd = callback.data&lt;/div&gt;&lt;div&gt;]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="500" y="425" width="230" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-43" value="Кнопка товара" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="410" width="180" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
