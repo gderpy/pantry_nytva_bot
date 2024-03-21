@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-21T07:04:13.841Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="nr0rBhRq1ziEwR7XGmoj" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-21T07:07:10.174Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="fAJ31m27APdSS619RqID" version="24.0.7" type="github">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
     <mxGraphModel dx="1235" dy="1498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -106,6 +106,21 @@
         </mxCell>
         <mxCell id="ZS3xe6GgBJdOie5ZOIFw-33" value="CatalogCF&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=%phones%&amp;nbsp;&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;paginator=0&lt;/div&gt;&lt;div&gt;page=1&lt;/div&gt;&lt;div&gt;photo=1&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;catalog_cd: catalog:phones:0:0:1:1&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
           <mxGeometry x="1310" y="425" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-34" value="Товар без фото&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="595" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-35" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="595" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-36" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="595" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-37" value="Товар с фото - если добавлено максимальное количество фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="595" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-38" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1840" y="595" width="240" height="125" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
