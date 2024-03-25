@@ -1,300 +1,47 @@
-<mxfile host="app.diagrams.net" modified="2024-03-25T11:27:47.389Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="Uu-fIE_pQI5OwMkfO8C9" version="24.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-25T14:38:25.780Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="uDgCjuTObIqZqvIYIzTZ" version="24.1.0" type="github">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
-    <mxGraphModel dx="656" dy="1194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="636" dy="334" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-1" target="ZS3xe6GgBJdOie5ZOIFw-3" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-36" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="280" width="250" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-1" target="ZS3xe6GgBJdOie5ZOIFw-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-37" value="Смартфоны" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="340" width="110" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-1" value="Admin" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="70" y="70" width="120" height="30" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-38" value="Лэтуаль" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="340" width="110" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-2" target="ZS3xe6GgBJdOie5ZOIFw-3" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-39" value="Детские товары" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="370" width="110" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-2" value="User" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="70" y="190" width="120" height="30" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-40" value="Электроника" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="370" width="110" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-3" target="ZS3xe6GgBJdOie5ZOIFw-8" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-41" value="Электроинструменты" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="400" width="230" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-3" value="Посмотреть товары" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="130" width="120" height="30" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-42" value="Назад" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="430" width="230" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-4" target="ZS3xe6GgBJdOie5ZOIFw-16" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="450" y="-350" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="410" y="-224" />
-              <mxPoint x="451" y="-224" />
-              <mxPoint x="451" y="-280" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="-JmOljmzNNRE6zTblJVj-43" value="Level 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="250" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-4" value="Добавить фото" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="-100" width="120" height="30" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-44" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="345" width="250" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-8" value="view_products" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="570" y="120" width="120" height="30" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-46" value="Телевизоры" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="410" width="110" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#a20025;strokeColor=#6F0000;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-11" target="ZS3xe6GgBJdOie5ZOIFw-18" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1310" y="-450" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="870" y="-79" />
-              <mxPoint x="1320" y="-79" />
-              <mxPoint x="1320" y="-455" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="-JmOljmzNNRE6zTblJVj-47" value="Ноутбуки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="410" width="110" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-11" value="ProductPhotoCF().pack() -&amp;nbsp;photo:0:0:0:0:0&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;product_id=0&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;menu_section=0&lt;/div&gt;&lt;div&gt;page=0&lt;/div&gt;&lt;div&gt;category=0&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="580" y="-200" width="290" height="135" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-48" value="Назад к выбору категорий" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="440" width="230" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.004;entryY=0.379;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-4" target="ZS3xe6GgBJdOie5ZOIFw-11" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-15" target="ZS3xe6GgBJdOie5ZOIFw-19" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-15" target="ZS3xe6GgBJdOie5ZOIFw-16" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-15" value="Кнопка назад к категориям из админской панели" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1020" y="-200" width="230" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-16" value="Категории товаров для добавления фото" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="632.5" y="-330" width="185" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-18" value="&lt;div&gt;[F.data == ProductPhotoCF().pack()]&lt;/div&gt;&lt;div&gt;[F.data == &quot;admin_view_products_again]&lt;/div&gt;async def open_category_selection" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="760" y="-485" width="350" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-19" value="admin_view_products_again" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="1027.5" y="-290" width="215" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.639;entryY=0.977;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#a20025;strokeColor=#6F0000;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-19" target="ZS3xe6GgBJdOie5ZOIFw-18" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-24" value="Категории&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Смартфоны | Лэтуаль&lt;/div&gt;&lt;div&gt;Детские товары | Электроника&lt;/div&gt;&lt;div&gt;Электроинструменты&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Назад&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1190" y="80" width="240" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-25" value="ProductPhotoCF().pack() -&amp;nbsp;photo:0:0:0:0:0&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;product_id=0&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;menu_section=0&lt;/div&gt;&lt;div&gt;page=0&lt;/div&gt;&lt;div&gt;category=0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;При добавлении фото&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
-          <mxGeometry x="1430" y="70" width="210" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-26" value="view_products&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;При обычном просмотре товара&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="980" y="70" width="210" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ZS3xe6GgBJdOie5ZOIFw-28" target="ZS3xe6GgBJdOie5ZOIFw-31" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1570" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-28" value="Смартфоны&lt;div&gt;Телефон 1&lt;/div&gt;&lt;div&gt;Телефон 2&lt;/div&gt;&lt;div&gt;Телефон 3&lt;/div&gt;&lt;div&gt;След стр.&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;Назад к категория&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1190" y="275" width="240" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-29" value="&lt;div&gt;[F.data == ProductPhotoCF().pack()]&lt;/div&gt;&lt;div&gt;[F.data == &quot;admin_view_products_again]&lt;/div&gt;async def open_category_selection" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="1640" y="125" width="350" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-31" value="&lt;div&gt;Кнопка Назад к категория&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;admin_view_products_again" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1700" y="185" width="180" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-32" value="CatalogCF&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=%phones%&amp;nbsp;&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;paginator=0&lt;/div&gt;&lt;div&gt;page=1&lt;/div&gt;&lt;div&gt;photo=0&lt;/div&gt;&lt;div&gt;photo_display=0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;catalog:phones:0:0:1:0&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1070" y="425" width="240" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-33" value="CatalogCF&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=%phones%&amp;nbsp;&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;paginator=0&lt;/div&gt;&lt;div&gt;page=1&lt;/div&gt;&lt;div&gt;photo=1&lt;/div&gt;&lt;div&gt;photo_display=0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;catalog_cd: catalog:phones:0:0:1:1&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
-          <mxGeometry x="1310" y="425" width="240" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-34" value="Товар без фото&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="800" y="900" width="240" height="95" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-35" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="752.5" y="590" width="240" height="95" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-36" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="830" width="240" height="107.5" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-37" value="Товар с фото - если добавлено максимальное количество фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="950" width="240" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-38" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Еще фото&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1840" y="595" width="240" height="145" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-40" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1880" y="1000" width="190" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-41" value="Кнопка товара" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="770" y="370" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-42" value="kb = [&lt;div&gt;Добавить в корзину - add_to_cart,&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Назад в каталог -&amp;nbsp; закинуть сюда наш прошлый callback_data -&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;message_engine.catalog_cd = callback.data&lt;/div&gt;&lt;div&gt;]&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="500" y="425" width="230" height="135" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-43" value="Кнопка товара" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1700" y="410" width="180" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-44" value="Товар с фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="800" y="795" width="240" height="105" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-45" value="Фото добавлено (+2)&lt;div&gt;Продолжить&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1467.5" y="710" width="135" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-46" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1840" y="780" width="240" height="145" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-47" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Отображение последнего фото&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2220" y="750" width="240" height="185" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-48" value="Товар с фото - если еще есть место для фото&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Отображение 2/3 фото&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото ⏩&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="2510" y="750" width="240" height="185" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-49" value="Товар без фото&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;⏪ Фото&lt;/div&gt;&lt;div&gt;Добавить в корзину&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="800" y="995" width="240" height="95" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-50" value="Товар (фото еще не добавлено)&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Добавить фото&lt;/div&gt;&lt;div&gt;Назад в каталог&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="710" width="240" height="107.5" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-51" value="&lt;div&gt;Выберите фото для удаления (доступно несколько фото для удаления)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;Фото ⏩&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Отменить&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1450" y="810" width="240" height="107.5" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-52" value="&lt;div&gt;Выберите фото для удаления (доступна только дна фотка)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Отменить&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1450" y="1160" width="240" height="107.5" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-53" value="&lt;div&gt;Выберите фото для удаления (доступно несколько фото для удаления)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;⏪ Фото ⏩&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Отменить&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1450" y="925" width="240" height="107.5" as="geometry" />
-        </mxCell>
-        <mxCell id="ZS3xe6GgBJdOie5ZOIFw-54" value="&lt;div&gt;Выберите фото для удаления (доступно несколько фото для удаления)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;Описание.....&lt;/div&gt;&lt;div&gt;⏪ Фото&amp;nbsp;&lt;/div&gt;&lt;div&gt;Удалить фото&lt;/div&gt;&lt;div&gt;Отменить&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1450" y="1040" width="240" height="107.5" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-1" value="Смартфоны&lt;div&gt;Телефон 1&lt;/div&gt;&lt;div&gt;Телефон 2&lt;/div&gt;&lt;div&gt;Телефон 3&lt;/div&gt;&lt;div&gt;След стр.&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;Назад к категория&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="760" y="1360" width="240" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-2" value="CatalogCF&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=%phones%&amp;nbsp;&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;paginator=0&lt;/div&gt;&lt;div&gt;page=1&lt;/div&gt;&lt;div&gt;photo=0&lt;/div&gt;&lt;div&gt;photo_display=0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;catalog:phones:0:0:1:0&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="520" y="1350" width="240" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-3" value="CatalogCF&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=%phones%&amp;nbsp;&lt;/div&gt;&lt;div&gt;product_number=0&lt;/div&gt;&lt;div&gt;paginator=0&lt;/div&gt;&lt;div&gt;page=1&lt;/div&gt;&lt;div&gt;photo=1&lt;/div&gt;&lt;div&gt;photo_display=0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;catalog_cd: catalog:phones:0:0:1:1&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
-          <mxGeometry x="1000" y="1350" width="240" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-4" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="680" y="1730" width="350" height="350" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-5" value="Описание товара" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="738.75" y="1910" width="232.5" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-6" value="Назад&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="738.75" y="2040" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-7" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="290" y="1730" width="350" height="350" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-8" value="Товар 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="1760" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-9" value="Товар 2" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="1800" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-10" value="Товар 3" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="1840" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-11" value="Товар 4" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="1880" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-12" value="Товар 5" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="1920" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-13" value="Товар 6" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="1960" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-14" value="Товар 7" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="2000" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-15" value="Товар 8 - product:phones:8:1:212:0:0&amp;nbsp;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%207%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22350%22%20y%3D%222000%22%20width%3D%22230%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="2040" width="230" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-16" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Кнопка Товар&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;без фото&lt;/div&gt;&lt;div&gt;добавление фото - нет&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;product:phones:8:1:212:0:0&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ProductCF:&lt;/div&gt;&lt;div&gt;category=phones,&lt;/div&gt;&lt;div&gt;product_number=8,&lt;/div&gt;&lt;div&gt;from_page=1,&lt;/div&gt;&lt;div&gt;product_id=212,&lt;/div&gt;&lt;div&gt;photo_number=0,&lt;/div&gt;&lt;div&gt;photo=False&amp;nbsp;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%207%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22350%22%20y%3D%222000%22%20width%3D%22230%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="2120" width="230" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-17" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Кнопка Товар&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;с фото&lt;/div&gt;&lt;div&gt;добавление фото - нет&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;product:phones:1:1:205:1:0&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ProductCF:&lt;/div&gt;&lt;div&gt;category=phones,&lt;/div&gt;&lt;div&gt;product_number=8,&lt;/div&gt;&lt;div&gt;from_page=1,&lt;/div&gt;&lt;div&gt;product_id=212,&lt;/div&gt;&lt;div&gt;photo_number=0,&lt;/div&gt;&lt;div&gt;photo=False&amp;nbsp;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%207%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22350%22%20y%3D%222000%22%20width%3D%22230%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="610" y="2120" width="230" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.532;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="kNKthGzg0QDyBVWxBuPw-33" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="880" y="2070" as="sourcePoint" />
-            <mxPoint x="1030" y="2180" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1030" y="2120" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-21" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Кнопка Товар&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;с фото&lt;/div&gt;&lt;div&gt;добавление фото - нет&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;product:phones:1:1:205:1:0&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;CatalogCF:&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=phones,&lt;/div&gt;&lt;div&gt;product_number=8,&lt;/div&gt;&lt;div&gt;Paginator=False,&lt;/div&gt;&lt;div&gt;page=1,&lt;/div&gt;&lt;div&gt;photo=False,&lt;/div&gt;&lt;div&gt;product_with_photo=False&amp;nbsp;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%207%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22350%22%20y%3D%222000%22%20width%3D%22230%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1160" y="2150" width="230" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-22" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="1730" width="340" height="340" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-23" value="Смартфоны" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1220" y="1870" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-24" value="Лэтуаль" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1390" y="1870" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-25" value="Детские товары" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1220" y="1920" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-26" value="Электроника" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1390" y="1920" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-27" value="Электроинструменты" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1220" y="1970" width="310" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-28" value="Вернуться в главное меню" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1220" y="2020" width="310" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-29" value="Выберете категорию товара" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="1220" y="1830" width="310" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-32" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.679;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="kNKthGzg0QDyBVWxBuPw-21" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1220" y="1884.41" as="sourcePoint" />
-            <mxPoint x="1120" y="2020" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1120" y="1940" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-33" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Кнопка Товар&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;с фото&lt;/div&gt;&lt;div&gt;добавление фото - нет&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;product:phones:1:1:205:1:0&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;CatalogCF:&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;category=phones,&lt;/div&gt;&lt;div&gt;product_number=8,&lt;/div&gt;&lt;div&gt;Paginator=False,&lt;/div&gt;&lt;div&gt;page=1,&lt;/div&gt;&lt;div&gt;photo=False,&lt;/div&gt;&lt;div&gt;product_with_photo=True&amp;nbsp;&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%207%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22350%22%20y%3D%222000%22%20width%3D%22230%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="910" y="2200" width="230" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="kNKthGzg0QDyBVWxBuPw-34" value="ФОТО" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="736.25" y="1780" width="232.5" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="2010" y="1730" width="340" height="340" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-2" value="Смартфоны" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2020" y="1870" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-3" value="Лэтуаль" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2200" y="1870" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-4" value="Детские товары" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2020" y="1920" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-5" value="Электроника" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2200" y="1920" width="140" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-6" value="Электроинструменты" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2025" y="1970" width="310" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-7" value="Вернуться в главное меню" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2025" y="2020" width="310" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-8" value="Админ" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2025" y="1745" width="125" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="-JmOljmzNNRE6zTblJVj-9" value="Пользователь" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2025" y="1790" width="125" height="30" as="geometry" />
+        <mxCell id="-JmOljmzNNRE6zTblJVj-49" value="Level 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="310" width="120" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
