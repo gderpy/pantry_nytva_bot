@@ -1,9 +1,9 @@
 import logging
 
 from aiogram import Router, F
-from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup
+from aiogram.types import CallbackQuery, Message
 from aiogram.fsm.context import FSMContext
-from aiogram.filters.state import StateFilter, State
+from aiogram.filters.state import StateFilter
 from aiogram.exceptions import TelegramBadRequest
 
 from message_engine import MessageEngine
@@ -185,8 +185,6 @@ async def handle_sent_order_data(callback: CallbackQuery,
                                  base_function: BaseFunctionsEngine,
                                  message_engine: MessageEngine,
                                  sql_engine: SQLEngine):
-
-    print("мы тут - order")
 
     obj_text = base_function.bot_text.ordering_text
 

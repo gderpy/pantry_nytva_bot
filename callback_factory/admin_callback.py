@@ -1,3 +1,4 @@
+from enum import Enum
 from aiogram.filters.callback_data import CallbackData
 
 
@@ -9,8 +10,24 @@ class AdminCF(CallbackData, prefix="admin"):
     excel_parser_cancel_upload: int = 0
 
 
-admin_cd = AdminCF(excel_parser=1)
-print(admin_cd.pack())
+class Level(str, Enum):
+    back_admin_menu = "admin_menu"
+    choose_category = "category"
+    choose_product = "product"
+    electronic_section = "electronic"
+
+
+class ProductPhotoCF(CallbackData, prefix="photo"):
+
+    product_id: int = 0
+
+    page: int = 0
+
+    category: str | int = 0
+
+
+
+
 
 
 

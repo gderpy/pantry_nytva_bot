@@ -1,8 +1,9 @@
 from pydantic import BaseModel
+from keyboards.catalog_kb import ChoosingCategory
 
 
 class MainMenu(BaseModel):
-    button_1: tuple[str, str] = ("Посмотреть товары 🛍", "view_products")
+    button_1: tuple[str, str] = ("Посмотреть товары 🛍", ChoosingCategory(user_type="user").pack())
     button_2: tuple[str, str] = ("Продать 🔖", "sell_a_product")
     button_2_1: tuple[str, str] = ("Заказать 📦", "order_a_product")
     button_3: tuple[str, str] = ("Про оплату 💳", "about_payment")

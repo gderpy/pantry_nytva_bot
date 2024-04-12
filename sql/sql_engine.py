@@ -2,10 +2,10 @@ import asyncio
 
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import DeclarativeBase
-from sqlalchemy import select, delete, text, func
+from sqlalchemy import select, delete, text, func, insert
 
 from config.db_config import postgres_url
-from sql.models import SellsTable, AllProductsTable, Base
+from sql.models import SellsTable, AllProductsTable, Base, Photos
 from sql.models.categories_models import (PhonesTable, CosmeticsTable, ChildrenGoodsTable,
                                           ElectronicTable, PowerToolsTable, TvTable, LaptopsTable)
 
@@ -101,6 +101,58 @@ class SQLEngine:
             print(product.id)
             await session.commit()
             return product.id
+
+    async def add_photo_id(self, photo_id: str, product_id: int):
+        async with self.async_session() as session:
+
+            stmt = insert(Photos).values(
+                [
+                    {"file_id": photo_id, "product_id": product_id}
+                ])
+
+            await session.execute(stmt)
+            await session.commit()
+
+    async def get_photos_from_table(self, product_id):
+        async with self.async_session() as session:
+
+            stmt = select(Photos).where(Photos.product_id == product_id)
+
+            res = await session.execute(stmt)
+
+            result = res.scalars().all()
+
+            file_ids = []
+
+            for row_data in result:
+                file_ids.append(row_data.file_id)
+
+            await session.commit()
+            return file_ids
+
+    async def check_photos_in_product(self, product_id):
+        async with self.async_session() as session:
+
+            stmt = select(Photos).where(Photos.product_id == product_id)
+            res = await session.execute(stmt)
+
+            result = res.scalar()
+
+            await session.commit()
+
+            if result is None:
+                return False
+            else:
+                return True
+
+    async def count_photos_in_product(self, product_id):
+        async with self.async_session() as session:
+
+            stmt = select(func.count()).select_from(Photos).where(Photos.product_id == product_id)
+            res = await session.execute(stmt)
+            result = res.scalar()
+            await session.commit()
+            return result
 
 
 

@@ -4,7 +4,7 @@ from aiogram import Router, F
 from aiogram.types import CallbackQuery
 from pathlib import Path
 
-from callback_factory.admin_callback import AdminCF
+from callback_factory.admin_callback import AdminCF, ProductPhotoCF, Level
 from keyboards.main_keyboard import inline_admin_panel
 
 
@@ -12,6 +12,7 @@ router = Router()
 
 
 @router.callback_query(F.data == "admin_panel")
+@router.callback_query(F.data == "back_to_admin_panel")
 @router.callback_query(F.data == AdminCF(excel_parser=1, excel_parser_cancel_upload=1).pack())
 async def handle_admin_panel(callback: CallbackQuery):
 

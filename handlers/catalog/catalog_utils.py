@@ -3,7 +3,6 @@ import logging
 from functools import wraps
 from aiogram.types import CallbackQuery
 
-from callback_factory.catalog_callbacks import CatalogCF
 from sql.sql_engine import SQLEngine
 
 categories_dict = {
@@ -20,7 +19,6 @@ categories_dict = {
 def get_products_from_category(func):
     @wraps(func)
     async def wrapped(callback: CallbackQuery, sql_engine: SQLEngine, *args, **kwargs):
-
         # Достаем название категории из CallbackFactory
         new_instance_callback = CatalogCF.unpack(value=callback.data)
         category = new_instance_callback.category
@@ -52,8 +50,6 @@ def get_products_from_category(func):
 def show_alert_if_products_are_missing(func):
     @wraps(func)
     async def wrapped(*args, **kwargs):
-        # logging.info("show_alert_if_products_are_missing")
-        # logging.info(f"args: {args}, kwargs: {kwargs}")
 
         if "callback" in kwargs and "products" in kwargs:
             callback = kwargs["callback"]
@@ -74,3 +70,32 @@ def show_alert_if_products_are_missing(func):
             raise KeyError("Ключи: CallbackQuery/products не обнаружены")
 
     return wrapped
+
+
+def photo_upload_check(func):
+    @wraps(func)
+    async def wrapped(*args, **kwargs):
+
+        print("kwargs")
+        print(kwargs)
+        print()
+
+        if "callback" in kwargs:
+            callback = kwargs["callback"]
+
+        photo_check = False
+
+        cf_name = kwargs.get("callback_factory").__class__.__name__
+        cf_new_instance = kwargs.get("callback_factory")
+
+        if cf_name in ["CatalogCF", "ProductCF"]:
+            photo_check = cf_new_instance.photo
+
+        print()
+        print(f"{cf_name}: {photo_check}")
+
+        return await func(*args, **kwargs, photo_check=photo_check)
+
+    return wrapped
+
+

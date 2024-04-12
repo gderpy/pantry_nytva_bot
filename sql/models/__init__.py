@@ -5,12 +5,15 @@ __all__ = ["Base",
            "AllProductsTable",
            "SellsTable",
            "OrdersTable",
-           "CategoriesTable"]
+           "CategoriesTable",
+
+           "Photos"]
 
 from .base import Base, fk_product_id, pk_int
 from .all_products import AllProductsTable
 from .sells_and_orders import SellsTable, OrdersTable
 from .categories_models.categories import CategoriesTable
+from .photos import Photos
 
 
 

@@ -4,7 +4,7 @@ from sqlalchemy.orm import DeclarativeBase
 from aiogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 from sql.sql_engine import SQLEngine
-from callback_factory.catalog_callbacks import CatalogCF, Paginator, ProductCF
+from keyboards.catalog_kb import CategoryPage, Paginator, ChoosingCategory, ProductPage
 
 
 class CatalogDisplay:
@@ -30,7 +30,8 @@ class CatalogDisplay:
         elif category == "Ноутбуки":
             return {"laptops": 1}
 
-    def __build_list_products_kb(self,
+    async def __build_list_products_kb(self,
+                                 user_type: str,
                                  products: dict,
                                  products_number: int,
                                  category: str,
@@ -49,21 +50,30 @@ class CatalogDisplay:
 
         forward_button = InlineKeyboardButton(
                              text="⏩",
-                             callback_data=CatalogCF(
+                             callback_data=CategoryPage(
+                                 user_type=user_type,
                                  category=category,
                                  paginator=Paginator.next_page,
-                                 page=current_page).pack())
+                                 current_page=current_page
+                             ).pack())
 
         backward_button = InlineKeyboardButton(
                               text="⏪",
-                              callback_data=CatalogCF(
+                              callback_data=CategoryPage(
+                                  user_type=user_type,
                                   category=category,
                                   paginator=Paginator.previous_page,
-                                  page=current_page).pack())
+                                  current_page=current_page
+                              ).pack())
+
+        if user_type == "user":
+            cd = ChoosingCategory(user_type="user").pack()
+        else:
+            cd = ChoosingCategory(user_type="admin").pack()
 
         back_categories_button = InlineKeyboardButton(
                                     text="Назад к выбору категории",
-                                    callback_data="view_products_again")
+                                    callback_data=cd)
 
         buttons_list: list[list[InlineKeyboardButton]] = []
 
@@ -83,12 +93,20 @@ class CatalogDisplay:
                 return InlineKeyboardMarkup(inline_keyboard=buttons_menu)
             else:
                 name = products[i]["catalog_name"]
+                product_id = products[i]["id"]
+
+                number_of_photos = await self.sql_engine.count_photos_in_product(product_id)
+
                 buttons_list.append([InlineKeyboardButton(
-                                text=name,
-                                callback_data=ProductCF(category=category,
-                                                        product_number=i,
-                                                        from_page=current_page,
-                                                        product_id=products[i]["id"]).pack())])
+                    text=name,
+                    callback_data=ProductPage(
+                        user_type=user_type,
+                        category=category,
+                        product_id=product_id,
+                        current_page=current_page,
+                        number_of_photos=number_of_photos,
+                        first_press=True).pack()
+                )])
 
         if current_page == 1 and products_number > 8:
             buttons_list += [[forward_button],
@@ -109,22 +127,22 @@ class CatalogDisplay:
 
         return InlineKeyboardMarkup(inline_keyboard=buttons_list)
 
-    def display_category_products(self,
-                                  products: dict,
-                                  category: str,
-                                  current_page: int) -> InlineKeyboardMarkup:
+    async def display_category_products(self,
+                                        user_type: str,
+                                        products: dict,
+                                        category: str,
+                                        current_page: int) -> InlineKeyboardMarkup:
 
         total_number: int = len(products)
 
-        keyboard_catalog = self.__build_list_products_kb(
+        keyboard_catalog = await self.__build_list_products_kb(
+            user_type=user_type,
             products=products,
             products_number=total_number,
             category=category,
-            current_page=current_page
-        )
+            current_page=current_page)
 
         return keyboard_catalog
-
 
     async def check_products_in_category(self, model: DeclarativeBase, callback: CallbackQuery):
         if await self.sql_engine.count_products_in_category(model=model) == 0:

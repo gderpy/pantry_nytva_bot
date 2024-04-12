@@ -1,11 +1,14 @@
 from pydantic import BaseModel
-from callback_factory.admin_callback import AdminCF
+from callback_factory.admin_callback import AdminCF, ProductPhotoCF, Level
+from keyboards.catalog_kb import ChoosingCategory
 
 
 class AdminMenu(BaseModel):
     button_1: tuple[str, str] = ("Скачать Excel-файл 📥", AdminCF(excel_parser=1).pack())
     button_1_2: tuple[str, str] = ("Загрузить Excel-файл 📤", AdminCF(excel_parser_upload=1).pack())
-    button_2: tuple[str, str] = ("Добавить фото 📸", AdminCF(catalog_editor=1).pack())
+
+    button_2: tuple[str, str] = ("Редактировать товар ✏", ChoosingCategory(user_type="admin").pack())
+
     button_3: tuple[str, str] = ("Назад в меню 📱", "back_to_main_menu")
     button_4: tuple[str, str] = ("Скрыть файл для скачивания 🗃", AdminCF(
                                                                     excel_parser=1,
@@ -17,6 +20,8 @@ class AdminMenu(BaseModel):
 
     button_6: tuple[str, str] = ("Начать выгрузку данных в каталог 📥", AdminCF(excel_parser=1,
                                                                                 excel_parser_upload=1).pack())
+
+    button_7: tuple[str, str] = ("Вернуться назад 📱", ProductPhotoCF(menu_section=Level.back_admin_menu).pack())
 
     def button_layout(self, admin=True):
 

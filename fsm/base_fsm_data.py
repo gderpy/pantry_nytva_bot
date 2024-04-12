@@ -12,5 +12,9 @@ class FSMOrderProduct(StatesGroup):
     contact = State()
 
 
+class FSMAddPhoto(StatesGroup):
+    photo = State()
+
+
 
 
